@@ -13,7 +13,7 @@ def is_float(s):
     
     i = s.find('.')
     if i == -1: return False
-    return is_integer(s[:i]) and is_integer(s[i+1:])
+    return is_integer(s[:i]) and s[i+1:].isdigit()
 
 def is_leap(year): 
     return int(year % 4 == 0) - int(year % 100 == 0) + int(year % 400 == 0)
